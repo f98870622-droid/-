@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GLORIS BEAUTY — премиальный салон красоты у м. XXX. Лазерная эпиляция, косметология, маникюр, парикмахерские услуги.">
+  <title>GLORIS BEAUTY — Салон красоты премиум-класса</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="js/tailwind-config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/yclients-widget.css">
+</head>
+<body data-page="home">
+
+  <div class="site-container">
+
+    <header id="header" class="site-header top-nav">
+      <div class="top-nav-bar">
+        <div class="top-nav-start">
+          <a href="index.html" class="top-nav-logo">GLORIS BEAUTY</a>
+        </div>
+        <nav class="top-nav-center top-nav-menu" aria-label="Навигация">
+          <a href="index.html" data-page="home" class="top-nav-link nav-link">Главная</a>
+          <a href="services.html" data-page="services" class="top-nav-link nav-link">Услуги</a>
+          <a href="masters.html" data-page="masters" class="top-nav-link nav-link">Мастера</a>
+          <a href="promo.html" data-page="promo" class="top-nav-link nav-link">Акции</a>
+          <a href="contacts.html" data-page="contacts" class="top-nav-link nav-link">Контакты</a>
+        </nav>
+        <div class="top-nav-end top-nav-actions">
+          <div class="top-nav-contacts">
+            <a href="tel:+74950000000" class="top-nav-phone">+7 (495) XXX-XX-XX</a>
+            <div class="top-nav-social" aria-label="Соцсети">
+              <a href="#">VK</a>
+              <a href="#">Telegram</a>
+            </div>
+          </div>
+          <button type="button" class="top-nav-cta yc-widget-open">Записаться</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="main-content">
+        <div class="hero-image hero-text-animate">
+          <img src="images/hero-main.png" alt="Маникюр и nail-арт в GLORIS BEAUTY" width="1920" height="1080" loading="eager" fetchpriority="high">
+        </div>
+        <div class="hero-text hero-text-animate delay-1">
+          <div class="hero-copy">
+            <h1 class="hero-heading">
+              <span class="hero-line">Новый уровень красоты,</span>
+              <span class="hero-line">одна безупречная история за другой.</span>
+            </h1>
+            <p class="hero-lead">
+              <span class="hero-line">Создайте образ, который вдохновляет:</span>
+              <span class="hero-line">подберём процедуры и сервис под вашу уникальность.</span>
+            </p>
+            <a href="services.html" class="explore-btn ds-btn lo-pill-btn">
+              Смотреть услуги
+              <span class="ds-btn__arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- MARQUEE -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span class="marquee-group">АКЦИЯ N1: 6 140 → 5 390 ₽ &nbsp;✦&nbsp; АКЦИЯ N2: 5 140 → 3 990 ₽ &nbsp;✦&nbsp; ЭКОНОМИЯ ДО 1 940 ₽ &nbsp;✦&nbsp; GLORIS BEAUTY &nbsp;✦&nbsp;</span>
+          <span class="marquee-group" aria-hidden="true">АКЦИЯ N1: 6 140 → 5 390 ₽ &nbsp;✦&nbsp; АКЦИЯ N2: 5 140 → 3 990 ₽ &nbsp;✦&nbsp; ЭКОНОМИЯ ДО 1 940 ₽ &nbsp;✦&nbsp; GLORIS BEAUTY &nbsp;✦&nbsp;</span>
+        </div>
+      </div>
+
+      <!-- PROMO CARDS -->
+      <section class="promo-sections" aria-label="Специальные предложения">
+        <article class="promo-card green reveal">
+          <img src="images/epilation-legs.png" alt="Акция N1 — лазерная эпиляция ног" class="promo-image" loading="lazy">
+          <div class="promo-content">
+            <span class="promo-badge-inline text-overline">Акция N1</span>
+            <div class="promo-price" aria-label="Цена: было 6 140 рублей, стало 5 390 рублей">
+              <span class="price-old">6 140 ₽</span>
+              <span class="price-arrow" aria-hidden="true">→</span>
+              <span class="price-new">5 390 ₽</span>
+            </div>
+            <span class="price-save">экономия 750 ₽</span>
+            <p class="promo-subtitle text-body">Ноги полностью + подмышки + бикини глубокое</p>
+          </div>
+        </article>
+        <article class="promo-card purple reveal">
+          <img src="images/epilation-underarm.png" alt="Акция N2 — лазерная эпиляция" class="promo-image" loading="lazy">
+          <div class="promo-content">
+            <span class="promo-badge-inline text-overline">Акция N2</span>
+            <div class="promo-price" aria-label="Цена: было 5 140 рублей, стало 3 990 рублей">
+              <span class="price-old">5 140 ₽</span>
+              <span class="price-arrow" aria-hidden="true">→</span>
+              <span class="price-new">3 990 ₽</span>
+            </div>
+            <span class="price-save">экономия 1 150 ₽</span>
+            <p class="promo-subtitle text-body">Голени + подмышки + бикини глубокое</p>
+          </div>
+        </article>
+        <a href="promo.html" class="view-all reveal text-ui">Все акции <span class="ds-btn__arrow" aria-hidden="true">→</span></a>
+      </section>
+
+      <!-- НАПРАВЛЕНИЯ УСЛУГ -->
+      <section class="section-block lo-services">
+        <header class="directions-header ds-section-header reveal">
+          <span class="directions-eyebrow ds-overline">Направления</span>
+          <h2 class="directions-title lo-heading ds-title text-h2">Услуги салона</h2>
+          <p class="lo-lead ds-lead text-body">Полный спектр beauty-услуг премиум-класса — от маникюра до аппаратной косметологии</p>
+        </header>
+        <div class="directions-grid">
+          <a href="services.html" class="direction-card direction-card--1 direction-card--featured reveal">
+            <span class="direction-card-label">Каталог</span>
+            <h3 class="direction-card-title">Полный спектр beauty-услуг премиум-класса</h3>
+            <span class="direction-card-btn lo-pill-btn lo-pill-btn--sm">Все услуги <span aria-hidden="true">↗</span></span>
+          </a>
+          <a href="services-medical.html" class="direction-card direction-card--2 reveal">
+            <span class="direction-card-label">Медицина</span>
+            <h3 class="direction-card-title">Лазерная эпиляция</h3>
+          </a>
+          <a href="services-medical.html" class="direction-card direction-card--3 reveal">
+            <span class="direction-card-label">Аппараты</span>
+            <h3 class="direction-card-title">Аппаратная косметология</h3>
+          </a>
+          <a href="services.html#massage" class="direction-card direction-card--4 reveal">
+            <span class="direction-card-label">Релакс</span>
+            <h3 class="direction-card-title">Массаж и SPA-уход</h3>
+          </a>
+          <a href="services.html#hair" class="direction-card direction-card--5 reveal">
+            <span class="direction-card-label">Волосы</span>
+            <h3 class="direction-card-title">Парикмахерские услуги</h3>
+          </a>
+          <a href="services.html#cosmetology" class="direction-card direction-card--6 reveal">
+            <span class="direction-card-label">Кожа</span>
+            <h3 class="direction-card-title">Косметология и уход</h3>
+          </a>
+          <a href="services.html#nails" class="direction-card direction-card--7 reveal">
+            <span class="direction-card-label">Ногти</span>
+            <h3 class="direction-card-title">Ногтевой сервис</h3>
+          </a>
+          <a href="services.html#brows" class="direction-card direction-card--8 reveal">
+            <span class="direction-card-label">Взгляд</span>
+            <h3 class="direction-card-title">Ресницы и брови</h3>
+          </a>
+          <a href="services.html#barbershop" class="direction-card direction-card--9 reveal">
+            <span class="direction-card-label">Мужской зал</span>
+            <h3 class="direction-card-title">Барбершоп</h3>
+          </a>
+          <a href="services.html#kids" class="direction-card direction-card--10 reveal">
+            <span class="direction-card-label">Детям</span>
+            <h3 class="direction-card-title">Детские услуги</h3>
+          </a>
+        </div>
+      </section>
+
+      <!-- ПОПУЛЯРНЫЕ УСЛУГИ -->
+      <section class="section-block alt lo-featured">
+        <header class="section-heading ds-section-header reveal">
+          <h2 class="section-title lo-heading ds-title text-h2">Популярные услуги</h2>
+          <p class="lo-lead ds-lead text-body">Популярные процедуры салона — актуальные цены в полном каталоге</p>
+        </header>
+        <div class="featured-grid">
+          <div class="featured-card featured-card--empty" aria-hidden="true"></div>
+          <div class="reveal featured-card featured-card--2">
+            <p class="featured-card-name">Лазерная эпиляция бикини глубокое</p>
+            <p class="featured-card-price">2 200 ₽</p>
+          </div>
+          <div class="reveal featured-card featured-card--3">
+            <p class="featured-card-name">Маникюр + гель-лак</p>
+            <p class="featured-card-price">2 000 ₽</p>
+          </div>
+          <div class="featured-card featured-card--empty" aria-hidden="true"></div>
+          <div class="reveal featured-card featured-card--5">
+            <p class="featured-card-name">Мужская стрижка</p>
+            <p class="featured-card-price">от 1 500 ₽</p>
+          </div>
+          <div class="reveal featured-card featured-card--6">
+            <p class="featured-card-name">Окрашивание волос</p>
+            <p class="featured-card-price">от 2 200 ₽</p>
+          </div>
+          <div class="reveal featured-card featured-card--7">
+            <p class="featured-card-name">Массаж спины</p>
+            <p class="featured-card-price">2 100 ₽</p>
+          </div>
+          <div class="reveal featured-card featured-card--8">
+            <p class="featured-card-name">Ультразвуковая чистка лица</p>
+            <p class="featured-card-price">2 800 ₽</p>
+          </div>
+          <div class="reveal featured-card featured-card--9">
+            <p class="featured-card-name">Ламинирование ресниц</p>
+            <p class="featured-card-price">2 000 ₽</p>
+          </div>
+          <div class="reveal featured-card featured-card--10">
+            <p class="featured-card-name">Детская стрижка</p>
+            <p class="featured-card-price">800 ₽</p>
+          </div>
+        </div>
+        <div class="text-center mt-10 reveal">
+          <a href="services.html" class="lo-pill-btn lo-pill-btn--outline">Полный прайс-лист</a>
+        </div>
+      </section>
+
+      <!-- ПРЕИМУЩЕСТВА -->
+      <section class="section-block lo-words">
+        <div class="lo-intro reveal">
+          <h2 class="lo-heading">Создаём красоту, с которой хочется оставаться</h2>
+          <p class="lo-lead">GLORIS BEAUTY сочетает элегантность и качество — безупречный сервис для тех, кто ценит настоящую роскошь</p>
+          <a href="services.html" class="lo-pill-btn">Наши услуги</a>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="reveal text-center">
+            <div class="text-4xl font-bold text-gray-200 mb-3">01</div>
+            <h3 class="font-semibold mb-2">Опыт 10+ лет</h3>
+            <p class="text-sm text-gray-500">Десятилетие безупречной работы в индустрии красоты</p>
+          </div>
+          <div class="reveal text-center">
+            <div class="text-4xl font-bold text-gray-200 mb-3">02</div>
+            <h3 class="font-semibold mb-2">Сертифицированные мастера</h3>
+            <p class="text-sm text-gray-500">Профессионалы с международными сертификатами</p>
+          </div>
+          <div class="reveal text-center">
+            <div class="text-4xl font-bold text-gray-200 mb-3">03</div>
+            <h3 class="font-semibold mb-2">Премиум аппараты</h3>
+            <p class="text-sm text-gray-500">Современное оборудование мировых брендов</p>
+          </div>
+          <div class="reveal text-center">
+            <div class="text-4xl font-bold text-gray-200 mb-3">04</div>
+            <h3 class="font-semibold mb-2">Медицинская лицензия</h3>
+            <p class="text-sm text-gray-500">Мед. процедуры по адресу на пр-т XXX</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ДВА АДРЕСА -->
+      <section class="section-block lo-addresses">
+        <div class="addresses-grid">
+          <article class="address-block address-block--kolomenskaya reveal">
+            <div class="address-photo">
+              <img src="images/salon-kolomenskaya.png" alt="Салон GLORIS BEAUTY — ул. XXX, д. 12" width="800" height="500" loading="lazy">
+            </div>
+            <span class="address-eyebrow">Адреса</span>
+            <h2 class="address-headline lo-heading">м. XXX — основной салон красоты</h2>
+            <p class="address-text lo-lead">Основной салон — маникюр, волосы, косметология, массаж, ресницы и барбершоп. Ежедневно 10:00–22:00.</p>
+            <p class="address-detail">ул. XXX, д. 12 · 3 мин от м. XXX</p>
+            <a href="contacts.html#kolomenskaya" class="address-btn lo-pill-btn lo-pill-btn--sm">Подробнее <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="address-block address-block--medical reveal">
+            <div class="address-photo">
+              <img src="images/salon-medical.png" alt="Фасад медицинского кабинета GLORIS BEAUTY — пр-т XXX, д. 24" width="769" height="1024" loading="lazy">
+            </div>
+            <span class="address-eyebrow">Медицина</span>
+            <h2 class="address-headline lo-heading">Медицинский кабинет — пр-т XXX, д. 24</h2>
+            <p class="address-text lo-lead">Лазерная эпиляция, аппаратная косметология и процедуры, требующие медицинской лицензии — в отдельной студии.</p>
+            <p class="address-detail">пр-т XXX, д. 24</p>
+            <a href="contacts.html#andropova" class="address-btn lo-pill-btn lo-pill-btn--sm">Подробнее <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-container">
+        <div class="grid md:grid-cols-3 gap-10 mb-10">
+          <div>
+            <p class="text-2xl font-bold text-white mb-3">GLORIS <span class="text-gray-400">BEAUTY</span></p>
+            <p class="text-sm text-gray-500 mb-4">Премиальный салон красоты в Москве</p>
+            <a href="tel:+74950000000" class="text-sm hover:text-white">+7 (495) XXX-XX-XX</a>
+          </div>
+          <div>
+            <h4>Навигация</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="services.html">Услуги</a></li>
+              <li><a href="masters.html">Мастера</a></li>
+              <li><a href="promo.html">Акции</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Соцсети</h4>
+            <div class="flex gap-3">
+              <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-white hover:text-black flex items-center justify-center transition-colors" aria-label="VK"><i class="fab fa-vk"></i></a>
+              <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-white hover:text-black flex items-center justify-center transition-colors" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+          <span>GLORIS BEAUTY</span>
+          <span>© 2025</span>
+          <a href="#" class="hover:text-white">Политика конфиденциальности</a>
+        </div>
+        <div class="footer-logo">GLORIS BEAUTY</div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/masters-data.js"></script>
+  <script src="js/services-catalog.js"></script>
+  <script src="js/yclients-widget.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

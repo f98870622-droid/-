@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390, initial-scale=1">
+  <link rel="preconnect" href="https://www.avito.st">
+  <link href="https://www.avito.st/s/common/assets/fonts/manrope/manrope-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face {
+      font-family: Manrope;
+      src: url('https://www.avito.st/s/common/assets/fonts/manrope/manrope-medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: Manrope;
+      src: url('https://www.avito.st/s/common/assets/fonts/manrope/manrope-bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 390px;
+      background: #fff;
+      font-family: Manrope, system-ui, -apple-system, sans-serif;
+      color: #000;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { padding: 16px; }
+    .summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #ebebeb;
+    }
+    .summary__score {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .summary__stars { color: #ffb021; font-size: 14px; letter-spacing: 2px; line-height: 1; }
+    .summary__count { font-size: 13px; color: #757575; margin-top: 4px; }
+    .card {
+      padding: 16px 0;
+      border-bottom: 1px solid #ebebeb;
+    }
+    .card--single {
+      border-bottom: none;
+      padding: 0;
+    }
+    .card:last-child { border-bottom: none; padding-bottom: 8px; }
+    .head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+    .avatar {
+      width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; font-weight: 700; color: #0af;
+      background: #ccecff;
+    }
+    .avatar--g { background: #ffe8cc; color: #f70; }
+    .avatar--p { background: #ecd4ff; color: #80f; }
+    .avatar--b { background: #d4f0ff; color: #08f; }
+    .name { font-size: 16px; font-weight: 700; line-height: 1.2; }
+    .meta { font-size: 13px; color: #757575; margin-top: 2px; }
+    .stars { color: #ffb021; font-size: 14px; letter-spacing: 2px; margin: 8px 0; line-height: 1; }
+    .tag {
+      font-size: 13px;
+      line-height: 1.35;
+      color: #008000;
+      margin-bottom: 8px;
+    }
+    .tag span { color: #757575; }
+    .text { font-size: 15px; line-height: 1.45; color: #000; }
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" id="root"></div>
+  <script>
+    const REVIEWS = {{REVIEWS_JSON}};
+
+    function avatarClass(name) {
+      const c = name.charAt(0).toLowerCase();
+      if ('гd'.includes(c)) return 'avatar--g';
+      if ('аp'.includes(c)) return 'avatar--p';
+      if ('рb'.includes(c)) return 'avatar--b';
+      return '';
+    }
+
+    function initial(name) {
+      return name.trim().charAt(0).toUpperCase();
+    }
+
+    const root = document.getElementById('root');
+    const mode = '{{MODE}}';
+
+    if (mode === 'summary') {
+      root.innerHTML = `
+        <div class="section-title">Отзывы</div>
+        <div class="summary">
+          <div class="summary__score">5,0</div>
+          <div>
+            <div class="summary__stars">★★★★★</div>
+            <div class="summary__count">5 отзывов</div>
+          </div>
+        </div>`;
+    } else if (mode === 'all') {
+      root.innerHTML = `
+        <div class="section-title">Отзывы</div>
+        <div class="summary">
+          <div class="summary__score">5,0</div>
+          <div>
+            <div class="summary__stars">★★★★★</div>
+            <div class="summary__count">5 отзывов</div>
+          </div>
+        </div>
+        ${REVIEWS.map(r => `
+          <article class="card">
+            <div class="head">
+              <span class="avatar ${avatarClass(r.name)}">${initial(r.name)}</span>
+              <div>
+                <div class="name">${r.name}</div>
+                <div class="meta">${r.date} · Клиент</div>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <div class="tag">Сделка состоялась <span>· ${r.service}</span></div>
+            <p class="text">${r.text}</p>
+          </article>`).join('')}`;
+    } else {
+      const r = REVIEWS[Number(mode)];
+      root.innerHTML = `
+        <article class="card card--single">
+          <div class="head">
+            <span class="avatar ${avatarClass(r.name)}">${initial(r.name)}</span>
+            <div>
+              <div class="name">${r.name}</div>
+              <div class="meta">${r.date} · Клиент</div>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <div class="tag">Сделка состоялась <span>· ${r.service}</span></div>
+          <p class="text">${r.text}</p>
+        </article>`;
+    }
+  </script>
+</body>
+</html>
